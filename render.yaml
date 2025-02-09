@@ -1,9 +1,10 @@
 services:
   - name: php-app
+    type: web
     image: php:8.2-apache
     ports:
-      - 8080:80 # Mapping port 8080 di Render ke port 80 di container
+      - 8080:80
     volumes:
-      - ./biasa:/var/www/html # Mount direktori local ke dalam container
+      - ./biasa:/var/www/html
     environment:
       - CLEAR_CACHE: false
