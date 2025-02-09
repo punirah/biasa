@@ -29,4 +29,5 @@ sleep(31);
 }
 
 echo "Selesai, bot berhenti...\n";
-        exit;
+        die();
+?>
