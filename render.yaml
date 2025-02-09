@@ -3,7 +3,7 @@ services:
     name: php-bot
     runtime: docker
     plan: free
-    repo: https://github.com/username/repository  # Ganti dengan repo GitHub kamu
+    repo: https://github.com/punirah/biasa # Ganti dengan repo GitHub kamu
     branch: main
     dockerfilePath: Dockerfile
     healthCheckPath: /
