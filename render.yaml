@@ -1,7 +1,7 @@
 services:
   - name: php-app
     type: web
-    image: php:8.2-apache
+    image: "php:8.2-apache"  # Tambahkan tanda kutip
     ports:
       - 8080:80
     volumes:
