@@ -1,4 +1,4 @@
 FROM php:8.2-cli
 WORKDIR /app
 COPY . .
-CMD php get.php
+ENTRYPOINT ["php", "get.php"]
