@@ -27,3 +27,6 @@ curl_close($ch);
 echo$abu1." 💰💰====".$time123."========================================💰💰\n";
 sleep(31);
 }
+
+echo "Selesai, bot berhenti...\n";
+        exit;
