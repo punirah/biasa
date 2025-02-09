@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: php-bot
+    runtime: docker
+    plan: free
+    repo: https://github.com/username/repository  # Ganti dengan repo GitHub kamu
+    branch: main
+    dockerfilePath: Dockerfile
+    healthCheckPath: /
+    autoDeploy: false  # Supaya tidak restart otomatis
