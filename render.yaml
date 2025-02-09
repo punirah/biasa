@@ -1,10 +1,9 @@
 services:
-  - type: web
-    name: php-bot
-    runtime: docker
-    plan: free
-    repo: https://github.com/punirah/biasa # Ganti dengan repo GitHub kamu
-    branch: main
-    dockerfilePath: Dockerfile
-    healthCheckPath: /
-    autoDeploy: false  # Supaya tidak restart otomatis
+  - name: php-app
+    image: php:8.2-apache
+    ports:
+      - 8080:80 # Mapping port 8080 di Render ke port 80 di container
+    volumes:
+      - ./biasa:/var/www/html # Mount direktori local ke dalam container
+    environment:
+      - CLEAR_CACHE: false
