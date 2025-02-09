@@ -1,10 +1,10 @@
 services:
-  - name: php-app
-    type: web
-    image: "php:8.2-apache"  # Tambahkan tanda kutip
-    ports:
-      - 8080:80
-    volumes:
-      - ./biasa:/var/www/html
-    environment:
-      - CLEAR_CACHE: false
+  - type: web
+    name: php-bot
+    runtime: docker
+    plan: free
+    repo: https://github.com/username/repository  # Ganti dengan repo GitHub kamu
+    branch: main
+    dockerfilePath: Dockerfile
+    healthCheckPath: /
+    autoDeploy: false  # Supaya tidak restart otomatis
