@@ -1,1 +1,0 @@
-system("php botv.php")
