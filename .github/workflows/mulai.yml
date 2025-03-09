@@ -3,7 +3,7 @@ name: Jalan PHP
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/110 * * * *'
+  - cron: '0 */2 * * *'
 
 jobs:
   run_bot:
