@@ -1,0 +1,23 @@
+name: Jalan PHP
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/110 * * * *'
+
+jobs:
+  run_bot:
+    runs-on: ubuntu-20.04
+    env:
+      KUNCIXX: ${{ secrets.KUNCIXX }}
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.3'
+
+    - name: Run PHP Script
+      run: php mulai.php
